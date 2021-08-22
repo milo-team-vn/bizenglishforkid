@@ -70,7 +70,7 @@
                 <div class="row">
                     <div class="col-md-4 col-12 text-center  text-white  mb-lg-5">
                         <div class="p-3 rounded shadow">
-                            <img src="https://bizenglish.vn/uploads/intro-1.jpg" class="pb-2 w-100">
+                            <img src="{{asset("uploads/intro-1.png")}}" class="pb-2 w-100">
                             <p><b class="text-origin">HỌC ONLINE TẠI NHÀ</b></p>
                             <p class="text-secondary font-weight-bold">Bạn không cần mất thời gian đưa bé tới trung
                                 tâm học. Bé có thể ngồi tại nhà để học và
@@ -80,7 +80,7 @@
                     </div>
                     <div class="col-md-4 col-12 text-center  text-white  mb-lg-5">
                         <div class="p-3 rounded shadow">
-                            <img src="https://bizenglish.vn/uploads/intro-2.jpg" class="pb-2 w-100">
+                            <img src="{{asset("uploads/intro-2.png")}}" class="pb-2 w-100">
                             <p><b class="text-origin">LỘ TRÌNH CÁ NHÂN HÓA</b></p>
                             <p class="text-secondary font-weight-bold">Học 1 kèm 1 ,giáo viên hiểu rõ trình độ
                                 bé, dạy bé theo lộ trình được cá nhân hóa
@@ -90,7 +90,7 @@
                     </div>
                     <div class="col-md-4 col-12 text-center text-white  mb-lg-5">
                         <div class="p-3  rounded shadow">
-                            <img src="https://bizenglish.vn/uploads/intro-3.jpg" class="pb-2 w-100">
+                            <img src="{{asset("uploads/intro-3.png")}}" class="pb-2 w-100">
                             <p><b class="text-origin">CHI PHÍ THẤP</b></p>
                             <p class="text-secondary font-weight-bold">Học 1 kèm 1 nhưng học phí mỗi buổi thấp
                                 hơn so với học lớp 10 – 12 bạn tại trung tâm.
