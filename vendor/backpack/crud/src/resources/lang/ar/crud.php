@@ -14,7 +14,7 @@
     */
 
 return [
-    'infoFiltered'                            => '(تمت التصفية من إجمالي _MAX_ صف)',
+    'infoFiltered'                            => '(filtered from _MAX_ total entries)',
     'thousands'                               => ',',
     'admin'                                   => 'المشرف',
     'browse_uploads'                          => 'تصفح التحميلات',
@@ -26,12 +26,12 @@ return [
     'table_max_reached'                       => 'أقصى عدد :max تم الوصول إليه',
     'zeroRecords'                             => 'لم يتم العثور على سجلات متطابقة',
     'infoEmpty'                               => '',
-    'info'                                    => 'إظهار _START_ إلى _END_ من _TOTAL_ صفوف',
+    'info'                                    => 'Showing _START_ to _END_ of _TOTAL_ entries',
     'details_row'                             => 'هذا هو صف التفاصيل. عدل كما تريد.',
     'reorder_text'                            => 'استخدام السحب والإفلات لإعادة الترتيب.',
     'reorder_success_message'                 => 'تم حفظ ترتيبك.',
     'reorder_error_message'                   => 'لم يتم حفظ ترتيبك.',
-    'lengthMenu'                              => 'صف في كل صفحة _MENU_',
+    'lengthMenu'                              => '_MENU_ records per page',
     'created_this'                            => 'أنشئت هذه',
     'page_link_placeholder'                   => 'http://example.com/your-desired-page',
     'actions'                                 => 'أفعال',
@@ -67,7 +67,6 @@ return [
     'save_action_save_and_edit'               => 'حفظ هذا العنصر وتعديله',
     'save_action_save_and_back'               => 'حفظ و رجوع',
     'save_action_save_and_new'                => 'حفظ وعنصر جديد',
-    'save_action_save_and_preview'            => 'حفظ ومعاينة',
     'reorder_error_title'                     => 'خطأ',
     'page_link'                               => 'رابط الصفحة',
     'external_link'                           => 'رابط خارجي',

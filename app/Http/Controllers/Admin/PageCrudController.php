@@ -66,7 +66,7 @@ class PageCrudController extends CrudController
         $this->crud->addField(['name'=>'payment','label'=>'Học phí và thanh toán','type'=>'ckeditor']);
         $this->crud->addField(['name'=>'be_teacher','label'=>'Trở thành giáo viên','type'=>'ckeditor']);
         $this->crud->addField(['name'=>'be_client','label'=>'Trở thành đối tác','type'=>'ckeditor']);
-        $this->crud->addField(['name'=>'trade_teachẻ','label'=>'Cung cấp giáo viên Online','type'=>'ckeditor']);
+        $this->crud->addField(['name'=>'trade_teacher','label'=>'Cung cấp giáo viên Online','type'=>'ckeditor']);
         $this->crud->setTabsType('ckeditor'); // fields
 
         /**

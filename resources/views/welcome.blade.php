@@ -24,8 +24,8 @@
                             </div>
                             </a>
                         </div>
-                    
-               
+
+
             </div>
             {{--            <div class="carousel-item">--}}
             {{--                <img class="d-block w-100"--}}
@@ -209,7 +209,7 @@
         }
     @endphp
     <div class="container-fluid custom-back-ground-02">
-        <div class="container">
+        <div class="container" id="giaovien">
             <div class="row">
                 <div class="col-12 pt-5 text-uppercase text-origin h2 text-center pb-2">GIÁO VIÊN CỦA CHÚNG TÔI</div>
                 <div class="col-md-6 col-12 text-center d-flex justify-content-between flex-column mb-lg-0 mb-5 ">
@@ -239,10 +239,10 @@
                 </div>
             </div>
         </div>
-        <div class="text-origin ">
-            <div class="container ">
+        <div class="text-origin" >
+            <div class="container " >
                 <div class="row">
-                
+
                     <div class="col-12 pt-5 text-uppercase h2 text-center">Tìm kiếm giáo viên</div>
                     <div class="col-12 h5 pb-2 text-center text-dark">Bạn có thể tìm cho bé giáo viên Việt Nam hoặc giáo viên nước ngoài phù hợp nhất về khóa học, mức chi phí và thới gian học.
                     </div>

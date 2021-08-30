@@ -3,11 +3,11 @@
 @section('content')
     <div class="row justify-content-center">
         <div class="col-12 col-md-9 col-lg-6">
-            <h3 class="text-center mb-4">{{ trans('backpack::base.reset_password') }}</h3>
-            <div class="nav-steps-wrapper">
+            <h3 class="text-center mb-4">Đặt lại mật khẩu</h3>
+            <div class="nav-steps-wrapper"> 
                 <ul class="nav nav-tabs">
-                      <li class="nav-item"><a class="nav-link disabled text-muted"><strong>{{ trans('backpack::base.step') }} 1.</strong> {{ trans('backpack::base.confirm_email') }}</a></li>
-                      <li class="nav-item active"><a class="nav-link active"><strong>{{ trans('backpack::base.step') }} 2.</strong> {{ trans('backpack::base.choose_new_password') }}</a></li>
+                      <li class="nav-item"><a class="nav-link disabled text-muted"><strong>Bước 1.</strong> Xác nhận Email</a></li>
+                      <li class="nav-item active"><a class="nav-link active"><strong>Bước 2.</strong> Đặt mật khẩu mới</a></li>
                 </ul>
             </div>
             <div class="nav-tabs-custom">
@@ -24,7 +24,7 @@
                         <input type="hidden" name="token" value="{{ $token }}">
 
                         <div class="form-group">
-                            <label class="control-label" for="email">{{ trans('backpack::base.email_address') }}</label>
+                            <label class="control-label" for="email">Địa chỉ Email</label>
 
                             <div>
                                 <input type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" id="email" value="{{ $email ?? old('email') }}">
@@ -38,7 +38,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label" for="password">{{ trans('backpack::base.new_password') }}</label>
+                            <label class="control-label" for="password">Mật khẩu mới</label>
 
                             <div>
                                 <input type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" id="password">
@@ -52,7 +52,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label" for="password_confirmation">{{ trans('backpack::base.confirm_new_password') }}</label>
+                            <label class="control-label" for="password_confirmation">Xác nhận mật khẩu</label>
                             <div>
                                 <input type="password" class="form-control{{ $errors->has('password_confirmation') ? ' is-invalid' : '' }}" name="password_confirmation" id="password_confirmation">
 
@@ -67,7 +67,7 @@
                         <div class="form-group mb-3">
                             <div>
                                 <button type="submit" class="btn btn-block btn-primary">
-                                    {{ trans('backpack::base.change_password') }}
+                                    Đổi mật khẩu
                                 </button>
                             </div>
                         </div>

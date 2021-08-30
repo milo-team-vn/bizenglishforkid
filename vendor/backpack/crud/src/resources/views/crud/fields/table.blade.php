@@ -80,7 +80,7 @@
         </table>
 
         <div class="array-controls btn-group m-t-10">
-            <button class="btn btn-sm btn-light" type="button" data-button-type="addItem"><i class="la la-plus"></i> {{trans('backpack::crud.add')}} {{ $item_name }}</button>
+            <button class="btn btn-sm btn-light" type="button" data-button-type="addItem"><i class="la la-plus"></i>Thêm {{ $item_name }}</button>
         </div>
 
     </div>

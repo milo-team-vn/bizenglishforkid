@@ -7,7 +7,7 @@ if (!$multiple && is_array($value)) {
     $value = Arr::first($value);
 }
 
-$field['wrapper'] = $field['wrapper'] ?? $field['wrapperAttributes'] ?? [];
+$field['wrapper'] = $field['wrapperAttributes'] ?? [];
 $field['wrapper']['data-init-function'] = $field['wrapper']['data-init-function'] ?? 'bpFieldInitBrowseMultipleElement';
 $field['wrapper']['data-elfinder-trigger-url'] = $field['wrapper']['data-elfinder-trigger-url'] ?? url(config('elfinder.route.prefix').'/popup/'.$field['name'].'?multiple=1');
 
@@ -40,11 +40,11 @@ if($sortable){
     <div class="btn-group" role="group" aria-label="..." style="margin-top: 3px;">
         <button type="button" class="browse popup btn btn-sm btn-light">
             <i class="la la-cloud-upload"></i>
-            {{ trans('backpack::crud.browse_uploads') }}
+            Nguồn tải lên
         </button>
         <button type="button" class="browse clear btn btn-sm btn-light">
             <i class="la la-eraser"></i>
-            {{ trans('backpack::crud.clear') }}
+            Dọn dẹp
         </button>
     </div>
 

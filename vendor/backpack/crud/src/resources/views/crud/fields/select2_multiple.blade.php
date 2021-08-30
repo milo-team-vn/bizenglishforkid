@@ -23,7 +23,6 @@
         data-init-function="bpFieldInitSelect2MultipleElement"
         data-select-all="{{ var_export($field['select_all'] ?? false)}}"
         data-options-for-js="{{json_encode(array_values($options_ids_array))}}"
-        data-language="{{ str_replace('_', '-', app()->getLocale()) }}"
         @include('crud::fields.inc.attributes', ['default_class' =>  'form-control select2_multiple'])
         {{ $field['multiple'] ? 'multiple' : '' }}>
 
@@ -43,8 +42,8 @@
     </select>
 
     @if(isset($field['select_all']) && $field['select_all'])
-        <a class="btn btn-xs btn-default select_all" style="margin-top: 5px;"><i class="la la-check-square-o"></i> {{ trans('backpack::crud.select_all') }}</a>
-        <a class="btn btn-xs btn-default clear" style="margin-top: 5px;"><i class="la la-times"></i> {{ trans('backpack::crud.clear') }}</a>
+        <a class="btn btn-xs btn-default select_all" style="margin-top: 5px;"><i class="la la-check-square-o"></i>Chọn tất cả</a>
+        <a class="btn btn-xs btn-default clear" style="margin-top: 5px;"><i class="la la-times"></i> Dọn dẹp</a>
     @endif
 
     {{-- HINT --}}
@@ -74,7 +73,7 @@
         <!-- include select2 js-->
         <script src="{{ asset('packages/select2/dist/js/select2.full.min.js') }}"></script>
         @if (app()->getLocale() !== 'en')
-        <script src="{{ asset('packages/select2/dist/js/i18n/' . str_replace('_', '-', app()->getLocale()) . '.js') }}"></script>
+        <script src="{{ asset('packages/select2/dist/js/i18n/' . app()->getLocale() . '.js') }}"></script>
         @endif
         <script>
             function bpFieldInitSelect2MultipleElement(element) {

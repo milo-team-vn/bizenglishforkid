@@ -14,7 +14,7 @@ class MyAccountController extends Controller
 
     public function __construct()
     {
-        $this->middleware(backpack_middleware());
+//        $this->middleware(backpack_middleware());
     }
 
     /**
@@ -24,6 +24,7 @@ class MyAccountController extends Controller
     {
         $this->data['title'] = trans('backpack::base.my_account');
         $this->data['user'] = $this->guard()->user();
+        $this->data['avatar'] = $this->guard()->user()->avatar;
 
         return view(backpack_view('my_account'), $this->data);
     }
@@ -36,7 +37,7 @@ class MyAccountController extends Controller
         $result = $this->guard()->user()->update($request->except(['_token']));
 
         if ($result) {
-            Alert::success(trans('backpack::base.account_updated'))->flash();
+            Alert::success(trans('Cập nhật thành công'))->flash();
         } else {
             Alert::error(trans('backpack::base.error_saving'))->flash();
         }

@@ -58,6 +58,7 @@ class RegisterController extends Controller
             'name'                             => 'required|max:255',
             backpack_authentication_column()   => 'required|'.$email_validation.'max:255|unique:'.$users_table,
             'password'                         => 'required|min:6|confirmed',
+            'phone'                            => 'required|max:11',
         ]);
     }
 
@@ -77,6 +78,7 @@ class RegisterController extends Controller
             'name'                             => $data['name'],
             backpack_authentication_column()   => $data[backpack_authentication_column()],
             'password'                         => bcrypt($data['password']),
+            'phone'                            => $data['phone'],
         ]);
     }
 

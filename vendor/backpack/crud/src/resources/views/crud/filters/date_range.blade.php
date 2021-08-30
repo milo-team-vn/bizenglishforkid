@@ -8,19 +8,19 @@
         'startDate' => \Carbon\Carbon::now()->toDateTimeString(),
         'endDate' => \Carbon\Carbon::now()->toDateTimeString(),
         'ranges' => [
-            trans('backpack::crud.today') =>  [\Carbon\Carbon::now()->startOfDay()->toDateTimeString(), \Carbon\Carbon::now()->endOfDay()->toDateTimeString()],
-            trans('backpack::crud.yesterday') => [\Carbon\Carbon::now()->subDay()->startOfDay()->toDateTimeString(), \Carbon\Carbon::now()->subDay()->endOfDay()->toDateTimeString()],
-            trans('backpack::crud.last_7_days') => [\Carbon\Carbon::now()->subDays(6)->startOfDay()->toDateTimeString(), \Carbon\Carbon::now()->toDateTimeString()],
-            trans('backpack::crud.last_30_days') => [\Carbon\Carbon::now()->subDays(29)->startOfDay()->toDateTimeString(), \Carbon\Carbon::now()->toDateTimeString()],
-            trans('backpack::crud.this_month') => [\Carbon\Carbon::now()->startOfMonth()->toDateTimeString(), \Carbon\Carbon::now()->endOfMonth()->toDateTimeString()],
-            trans('backpack::crud.last_month') => [\Carbon\Carbon::now()->subMonth()->startOfMonth()->toDateTimeString(), \Carbon\Carbon::now()->subMonth()->endOfMonth()->toDateTimeString()]
+           "Hôm nay" =>  [\Carbon\Carbon::now()->startOfDay()->toDateTimeString(), \Carbon\Carbon::now()->endOfDay()->toDateTimeString()],
+           "Hôm qua "=> [\Carbon\Carbon::now()->subDay()->startOfDay()->toDateTimeString(), \Carbon\Carbon::now()->subDay()->endOfDay()->toDateTimeString()],
+           "7 ngày trước" => [\Carbon\Carbon::now()->subDays(6)->startOfDay()->toDateTimeString(), \Carbon\Carbon::now()->toDateTimeString()],
+           "30 ngày trước" => [\Carbon\Carbon::now()->subDays(29)->startOfDay()->toDateTimeString(), \Carbon\Carbon::now()->toDateTimeString()],
+            "Tháng này" => [\Carbon\Carbon::now()->startOfMonth()->toDateTimeString(), \Carbon\Carbon::now()->endOfMonth()->toDateTimeString()],
+            "Tháng trước" => [\Carbon\Carbon::now()->subMonth()->startOfMonth()->toDateTimeString(), \Carbon\Carbon::now()->subMonth()->endOfMonth()->toDateTimeString()]
         ],
         'locale' => [
             'firstDay' => 0,
             'format' => config('backpack.base.default_date_format'),
-            'applyLabel'=> trans('backpack::crud.apply'),
-            'cancelLabel'=> trans('backpack::crud.cancel'),
-            'customRangeLabel' => trans('backpack::crud.custom_range')
+            'applyLabel'=> "Chấp nhận",
+            'cancelLabel'=> "Bỏ qua",
+            'customRangeLabel' => "Đặt phạm vi"
         ],
 
 
@@ -93,7 +93,7 @@
 
   			if (start && end) {
   				var dates = {
-					'from': start.format('YYYY-MM-DD HH:mm:ss'),
+					'from': start.format('YYYY-MM-DD HH:mm:ss '),
 					'to': end.format('YYYY-MM-DD HH:mm:ss')
                 };
 

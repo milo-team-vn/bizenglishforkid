@@ -5,8 +5,8 @@
     $checkedIcon = data_get($column, 'icons.checked', 'la-check-circle');
     $uncheckedIcon = data_get($column, 'icons.unchecked', 'la-circle');
 
-    $exportCheckedText = data_get($column, 'labels.checked', trans('backpack::crud.yes'));
-    $exportUncheckedText = data_get($column, 'labels.unchecked', trans('backpack::crud.no'));
+    $exportCheckedText = data_get($column, 'labels.checked',"Có"));
+    $exportUncheckedText = data_get($column, 'labels.unchecked', "Không"));
 
     $icon = $checkValue == false ? $uncheckedIcon : $checkedIcon;
 

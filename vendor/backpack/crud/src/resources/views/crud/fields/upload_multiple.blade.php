@@ -1,7 +1,12 @@
 @php
-    $field['wrapper'] = $field['wrapper'] ?? $field['wrapperAttributes'] ?? [];
-    $field['wrapper']['data-init-function'] = $field['wrapper']['data-init-function'] ?? 'bpFieldInitUploadMultipleElement';
-    $field['wrapper']['data-field-name'] = $field['wrapper']['data-field-name'] ?? $field['name'];
+    if (!isset($field['wrapperAttributes']) || !isset($field['wrapperAttributes']['data-init-function'])){
+        $field['wrapperAttributes']['data-init-function'] = 'bpFieldInitUploadMultipleElement';
+    }
+
+    if (!isset($field['wrapperAttributes']) || !isset($field['wrapperAttributes']['data-field-name'])) {
+        $field['wrapperAttributes']['data-field-name'] = $field['name'];
+    }
+
 @endphp
 
 <!-- upload multiple input -->

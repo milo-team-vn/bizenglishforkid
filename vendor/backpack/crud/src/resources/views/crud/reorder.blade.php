@@ -18,7 +18,7 @@
         <small>{!! $crud->getSubheading() ?? trans('backpack::crud.reorder').' '.$crud->entity_name_plural !!}.</small>
 
         @if ($crud->hasAccess('list'))
-          <small><a href="{{ url($crud->route) }}" class="d-print-none font-sm"><i class="la la-angle-double-left"></i> {{ trans('backpack::crud.back_to_all') }} <span>{{ $crud->entity_name_plural }}</span></a></small>
+          <small><a href="{{ url($crud->route) }}" class="d-print-none font-sm"><i class="la la-angle-double-left"></i> Quay lại tẩt cả <span>{{ $crud->entity_name_plural }}</span></a></small>
         @endif
     </h2>
 </div>
@@ -66,7 +66,7 @@ function tree_element($entry, $key, $all_entries, $crud)
 <div class="row mt-4">
     <div class="{{ $crud->getReorderContentClass() }}">
         <div class="card p-4">
-            <p>{{ trans('backpack::crud.reorder_text') }}</p>
+            <p>Sắp xếp lại văn bản</p>
 
             <ol class="sortable mt-0">
             <?php
@@ -82,7 +82,7 @@ function tree_element($entry, $key, $all_entries, $crud)
 
         </div><!-- /.card -->
 
-        <button id="toArray" class="btn btn-success" data-style="zoom-in"><i class="la la-save"></i> {{ trans('backpack::crud.save') }}</button>
+        <button id="toArray" class="btn btn-success" data-style="zoom-in"><i class="la la-save"></i> Lưu</button>
     </div>
 </div>
 @endsection

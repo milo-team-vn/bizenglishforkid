@@ -4,11 +4,11 @@
 @section('content')
     <div class="row justify-content-center">
         <div class="col-12 col-md-9 col-lg-6">
-            <h3 class="text-center mb-4">{{ trans('backpack::base.reset_password') }}</h3>
+            <h3 class="text-center mb-4">Reset mật khẩu</h3>
             <div class="nav-steps-wrapper">
                 <ul class="nav nav-tabs">
-                  <li class="nav-item active"><a class="nav-link active" href="#tab_1" data-toggle="tab"><strong>{{ trans('backpack::base.step') }} 1.</strong> {{ trans('backpack::base.confirm_email') }}</a></li>
-                  <li class="nav-item"><a class="nav-link disabled text-muted"><strong>{{ trans('backpack::base.step') }} 2.</strong> {{ trans('backpack::base.choose_new_password') }}</a></li>
+                  <li class="nav-item active"><a class="nav-link active" href="#tab_1" data-toggle="tab"><strong>Bước 1.</strong> Nhập email</a></li>
+                  <li class="nav-item"><a class="nav-link disabled text-muted"><strong>Bước 2.</strong> Đổi mật khẩu mới</a></li>
                 </ul>
             </div>
             <div class="nav-tabs-custom">
@@ -23,7 +23,7 @@
                         {!! csrf_field() !!}
 
                         <div class="form-group">
-                            <label class="control-label" for="email">{{ trans('backpack::base.email_address') }}</label>
+                            <label class="control-label" for="email">Địa chỉ email</label>
 
                             <div>
                                 <input type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" id="email" value="{{ old('email') }}">
@@ -39,7 +39,7 @@
                         <div class="form-group mb-3">
                             <div>
                                 <button type="submit" class="btn btn-block btn-primary">
-                                    {{ trans('backpack::base.send_reset_link') }}
+                                    Gửi link reset vào email của bạn
                                 </button>
                             </div>
                         </div>
@@ -53,10 +53,10 @@
               </div>
 
               <div class="text-center mt-4">
-                <a href="{{ route('backpack.auth.login') }}">{{ trans('backpack::base.login') }}</a>
+                <a href="{{ route('backpack.auth.login') }}">Đăng nhập</a>
 
                 @if (config('backpack.base.registration_open'))
-                / <a href="{{ route('backpack.auth.register') }}">{{ trans('backpack::base.register') }}</a>
+                / <a href="{{ route('backpack.auth.register') }}">Đăng ký</a>
                 @endif
               </div>
         </div>

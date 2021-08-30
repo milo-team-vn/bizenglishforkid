@@ -14,7 +14,7 @@
     $field['multiple'] = $field['multiple'] ?? $crud->guessIfFieldHasMultipleFromRelationType($field['relation_type']);
     $field['data_source'] = $field['data_source'] ?? url($crud->route.'/fetch/'.$routeEntity);
     $field['attribute'] = $field['attribute'] ?? $connected_entity->identifiableAttribute();
-    $field['placeholder'] = $field['placeholder'] ?? ($field['multiple'] ? trans('backpack::crud.select_entries') : trans('backpack::crud.select_entry'));
+    $field['placeholder'] = $field['placeholder'] ?? ($field['multiple'] ? "Chọn các mục" : "Chọn mục");
     $field['include_all_form_fields'] = $field['include_all_form_fields'] ?? true;
 
     // Note: isColumnNullable returns true if column is nullable in database, also true if column does not exist.
@@ -78,7 +78,6 @@
         data-current-value="{{ $field['value'] }}"
         data-app-current-lang="{{ app()->getLocale() }}"
         data-ajax-delay="{{ $field['delay'] }}"
-        data-language="{{ str_replace('_', '-', app()->getLocale()) }}"
 
         @include('crud::fields.inc.attributes', ['default_class' =>  'form-control'])
 
@@ -115,7 +114,7 @@
     <!-- include select2 js-->
     <script src="{{ asset('packages/select2/dist/js/select2.full.min.js') }}"></script>
     @if (app()->getLocale() !== 'en')
-    <script src="{{ asset('packages/select2/dist/js/i18n/' . str_replace('_', '-', app()->getLocale()) . '.js') }}"></script>
+    <script src="{{ asset('packages/select2/dist/js/i18n/' . app()->getLocale() . '.js') }}"></script>
     @endif
     @endpush
 

@@ -59,7 +59,7 @@ trait UpdateOperation
      *
      * @param int $id
      *
-     * @return \Illuminate\Contracts\View\View
+     * @return Response
      */
     public function edit($id)
     {
@@ -82,7 +82,7 @@ trait UpdateOperation
     /**
      * Update the specified resource in the database.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function update()
     {

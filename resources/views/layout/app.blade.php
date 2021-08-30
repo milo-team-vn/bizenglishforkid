@@ -47,7 +47,8 @@
                         <div class="input-group">
                             <input class="form-control" id="search" placeholder="Tìm khóa học ..."/>
                             <div class="input-group-append">
-                                <button class="btn btn-origin rounded-0" type="submit"><i class="fa fa-search"></i></button>
+                                <button class="btn btn-origin rounded-0" type="submit"><i class="fa fa-search"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -71,29 +72,29 @@
                         <a class="nav-link" href="{{route('index')}}">Trang chủ</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{route('index')}}">Về chúng tôi</a>
+                        <a class="nav-link" href="{{route('page',['type'=>'trade_teacher'])}}">Về chúng tôi</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{route('filter')}}">Tìm giáo viên</a>
+                        <a class="nav-link" href="{{route('index')}}#giaovien">Tìm giáo viên</a>
                     </li>
-{{--                    <li class="nav-item dropdown">--}}
-{{--                        <a class="nav-link  text-white dropdown-toggle" href="http://example.com"--}}
-{{--                           id="navbarDropdownMenuLink"--}}
-{{--                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
-{{--                            Khóa học--}}
-{{--                        </a>--}}
-{{--                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">--}}
-{{--                            <li><a class="dropdown-item" href="{{route('tag','hoc-giao-tiep-online-1-1.html')}}">Học--}}
-{{--                                    Giao Tiếp Online 1-1</a></li>--}}
-{{--                            <li><a class="dropdown-item" href="{{route('tag','hoc-viet-online-1-1.html')}}">Học Viết--}}
-{{--                                    Online 1-1</a></li>--}}
-{{--                            <li><a class="dropdown-item" href="{{route('tag','khoa-hoc-theo-yeu-cau.html')}}">Khóa Học--}}
-{{--                                    Theo Yêu Cầu</a></li>--}}
-{{--                            <li><a class="dropdown-item" href="{{route('tag','cac-khoa-hoc-video.html')}}">Các Khóa Học--}}
-{{--                                    Video</a></li>--}}
+                    {{--                    <li class="nav-item dropdown">--}}
+                    {{--                        <a class="nav-link  text-white dropdown-toggle" href="http://example.com"--}}
+                    {{--                           id="navbarDropdownMenuLink"--}}
+                    {{--                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
+                    {{--                            Khóa học--}}
+                    {{--                        </a>--}}
+                    {{--                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">--}}
+                    {{--                            <li><a class="dropdown-item" href="{{route('tag','hoc-giao-tiep-online-1-1.html')}}">Học--}}
+                    {{--                                    Giao Tiếp Online 1-1</a></li>--}}
+                    {{--                            <li><a class="dropdown-item" href="{{route('tag','hoc-viet-online-1-1.html')}}">Học Viết--}}
+                    {{--                                    Online 1-1</a></li>--}}
+                    {{--                            <li><a class="dropdown-item" href="{{route('tag','khoa-hoc-theo-yeu-cau.html')}}">Khóa Học--}}
+                    {{--                                    Theo Yêu Cầu</a></li>--}}
+                    {{--                            <li><a class="dropdown-item" href="{{route('tag','cac-khoa-hoc-video.html')}}">Các Khóa Học--}}
+                    {{--                                    Video</a></li>--}}
 
-{{--                        </ul>--}}
-{{--                    </li>--}}
+                    {{--                        </ul>--}}
+                    {{--                    </li>--}}
                     <li class="nav-item dropdown">
                         <a class="nav-link text-white dropdown-toggle" href="http://example.com"
                            id="navbarDropdownMenuLink"
@@ -111,7 +112,9 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="{{route('index')}}#study-register">Tư vấn học thử</a>
+                        <a class="nav-link text-white"
+                           href="https://docs.google.com/forms/d/1hAzf5BeeEF6ou6PTAcQHMOf1mmuo63MDlvgqGEBbC4Y/viewform?edit_requested=true">Tư
+                            vấn học thử</a>
                     </li>
                 </ul>
                 <div class="text-white">
@@ -158,10 +161,10 @@
                             Văn phòng giao dịch Hà Nội:<br>
                             Phòng 08, tầng 38, Tòa HH3B khu đô thị Linh Đàm, quận Hoàng Mai, Hà Nội.
                         </div>
-{{--                        <div><i class="fas fa-building"></i>--}}
-{{--                            Văn phòng giao dịch Đà Nẵng:<br>--}}
-{{--                            Số 80 Trần Văn Dư, quận Ngũ Hành Sơn, Tp Đà Nẵng.--}}
-{{--                        </div>--}}
+                        {{--                        <div><i class="fas fa-building"></i>--}}
+                        {{--                            Văn phòng giao dịch Đà Nẵng:<br>--}}
+                        {{--                            Số 80 Trần Văn Dư, quận Ngũ Hành Sơn, Tp Đà Nẵng.--}}
+                        {{--                        </div>--}}
                     </div>
                 </div>
 
@@ -206,9 +209,14 @@
 
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <ul class="social-icons">
-                        <li><a class="bg-primary text-white" href="https://www.facebook.com/bizenglishforsuccess/"><i class="fab fa-facebook"></i></a></li>
-                        <li><a class="bg-danger text-white" href="https://www.youtube.com/channel/UCN5yXnMNbee92FQWR2Eq2nQ"><i class="fab fa-youtube"></i></a></li>
-                        <li><a class="bg-primary" href="https://zalo.me/0977281661"><img src="https://cdn.freebiesupply.com/logos/large/2x/zalo-1-logo-black-and-white.png" class="w-100 rounded-circle"></a></li>
+                        <li><a class="bg-primary text-white" href="https://www.facebook.com/bizenglishforsuccess/"><i
+                                    class="fab fa-facebook"></i></a></li>
+                        <li><a class="bg-danger text-white"
+                               href="https://www.youtube.com/channel/UCN5yXnMNbee92FQWR2Eq2nQ"><i
+                                    class="fab fa-youtube"></i></a></li>
+                        <li><a class="bg-primary" href="https://zalo.me/0977281661"><img
+                                    src="https://cdn.freebiesupply.com/logos/large/2x/zalo-1-logo-black-and-white.png"
+                                    class="w-100 rounded-circle"></a></li>
                     </ul>
                 </div>
             </div>
@@ -244,17 +252,18 @@
     chatbox.setAttribute("page_id", "105441925087047");
     chatbox.setAttribute("attribution", "biz_inbox");
 
-    window.fbAsyncInit = function() {
+    window.fbAsyncInit = function () {
         FB.init({
-            xfbml            : true,
-            version          : 'v11.0'
+            xfbml: true,
+            version: 'v11.0'
         });
     };
 
-    (function(d, s, id) {
+    (function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
+        js = d.createElement(s);
+        js.id = id;
         js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));

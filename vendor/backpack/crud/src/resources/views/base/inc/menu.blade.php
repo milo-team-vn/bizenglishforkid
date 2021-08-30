@@ -18,10 +18,10 @@
 <!-- ========================================================= -->
 <ul class="nav navbar-nav ml-auto @if(config('backpack.base.html_direction') == 'rtl') mr-0 @endif">
     @if (backpack_auth()->guest())
-        <li class="nav-item"><a class="nav-link" href="{{ route('backpack.auth.login') }}">{{ trans('backpack::base.login') }}</a>
+        <li class="nav-item"><a class="nav-link" href="{{ route('backpack.auth.login') }}">Đăng nhập</a>
         </li>
         @if (config('backpack.base.registration_open'))
-            <li class="nav-item"><a class="nav-link" href="{{ route('backpack.auth.register') }}">{{ trans('backpack::base.register') }}</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ route('backpack.auth.register') }}">Đăng ký</a></li>
         @endif
     @else
         <!-- Topbar. Contains the right part -->

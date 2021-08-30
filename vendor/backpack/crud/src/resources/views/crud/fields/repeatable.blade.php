@@ -58,7 +58,7 @@
   </div>
 
 
-  <button type="button" class="btn btn-outline-primary btn-sm ml-1 add-repeatable-element-button">+ {{ $field['new_item_label'] ?? trans('backpack::crud.new_item') }}</button>
+  <button type="button" class="btn btn-outline-primary btn-sm ml-1 add-repeatable-element-button">+ {{ $field['new_item_label'] ?? "Mục mới"</button>
 
 @include('crud::fields.inc.wrapper_end')
 
@@ -216,7 +216,7 @@
             if (values != null) {
                 // set the value on field inputs, based on the JSON in the hidden input
                 new_field_group.find('input, select, textarea').each(function () {
-                    if ($(this).data('repeatable-input-name') && values.hasOwnProperty($(this).data('repeatable-input-name'))) {
+                    if ($(this).data('repeatable-input-name')) {
 
                         // if the field provides a `data-value-prefix` attribute, we should respect that and add that prefix to the value.
                         // this is different than using prefix in fields like text, number etc. In those cases the prefix is used

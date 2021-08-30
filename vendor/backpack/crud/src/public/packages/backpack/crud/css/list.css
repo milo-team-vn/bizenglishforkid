@@ -63,7 +63,7 @@
 		content: "\f142";
 		font-size: 21px;
 		box-shadow: none;
-		margin-top: -12px;
+		/*margin-top: 8px;*/
 		border: none;
 	}
 
@@ -77,10 +77,6 @@
 
 	#crudTable td {
 		outline: none;
-		vertical-align: middle;
-	}
-
-	#crudTable td > span {
 		vertical-align: middle;
 	}
 

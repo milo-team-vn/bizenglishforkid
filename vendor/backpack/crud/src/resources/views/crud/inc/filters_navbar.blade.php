@@ -2,7 +2,7 @@
       <!-- Brand and toggle get grouped for better mobile display -->
       <a class="nav-item d-none d-lg-block"><span class="la la-filter"></span></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bp-filters-navbar" aria-controls="bp-filters-navbar" aria-expanded="false" aria-label="{{ trans('backpack::crud.toggle_filters') }}">
-        <span class="la la-filter"></span> {{ trans('backpack::crud.filters') }}
+        <span class="la la-filter"></span> Bộ lọc
       </button>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -12,7 +12,7 @@
     			@foreach ($crud->filters() as $filter)
     				@include($filter->getViewWithNamespace())
     			@endforeach
-          <li class="nav-item"><a href="#" id="remove_filters_button" class="nav-link {{ count(Request::input()) != 0 ? '' : 'invisible' }}"><i class="la la-eraser"></i> {{ trans('backpack::crud.remove_filters') }}</a></li>
+          <li class="nav-item"><a href="#" id="remove_filters_button" class="nav-link {{ count(Request::input()) != 0 ? '' : 'invisible' }}"><i class="la la-eraser"></i> Loại bỏ bộ lọc</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
   </nav>

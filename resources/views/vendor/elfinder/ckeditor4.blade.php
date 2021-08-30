@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
     <head>
-        
+
         @include('vendor.elfinder.common_scripts')
         @include('vendor.elfinder.common_styles')
 
@@ -23,7 +23,7 @@
                     @if($locale)
                         lang: '{{ $locale }}', // locale
                     @endif
-                    customData: { 
+                    customData: {
                         _token: '{{ csrf_token() }}'
                     },
                     url: '{{ route("elfinder.connector") }}',  // connector URL
@@ -39,7 +39,7 @@
     <body>
 
         <!-- Element where elFinder will be created (REQUIRED) -->
-        <div id="elfinder"></div>
+{{--        <div id="elfinder"></div>--}}
 
     </body>
 </html>

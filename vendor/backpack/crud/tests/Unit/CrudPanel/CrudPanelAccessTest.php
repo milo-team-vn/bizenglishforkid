@@ -4,9 +4,6 @@ namespace Backpack\CRUD\Tests\Unit\CrudPanel;
 
 use Backpack\CRUD\app\Exceptions\AccessDeniedException;
 
-/**
- * @covers Backpack\CRUD\app\Library\CrudPanel\Traits\Access
- */
 class CrudPanelAccessTest extends BaseCrudPanelTest
 {
     private $unknownPermission = 'unknownPermission';

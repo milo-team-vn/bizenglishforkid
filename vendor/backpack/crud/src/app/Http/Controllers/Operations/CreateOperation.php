@@ -48,7 +48,7 @@ trait CreateOperation
     /**
      * Show the form for creating inserting a new row.
      *
-     * @return \Illuminate\Contracts\View\View
+     * @return Response
      */
     public function create()
     {

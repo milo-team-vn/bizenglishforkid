@@ -1,7 +1,6 @@
 @php
 	// if not otherwise specified, the hidden input should take up no space in the form
-  $field['wrapper'] = $field['wrapper'] ?? $field['wrapperAttributes'] ?? [];
-  $field['wrapper']['class'] = $field['wrapper']['class'] ?? "hidden";
+  $field['wrapper']['class'] = $field['wrapper']['class'] ?? $field['wrapperAttributes']['class'] ?? "hidden";
 @endphp
 
 <!-- hidden input -->

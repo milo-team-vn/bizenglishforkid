@@ -13,7 +13,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="{{ $entity }}-inline-create-dialog-label">
-            {!! $crud->getSubheading() ?? trans('backpack::crud.add').' '.$crud->entity_name !!}
+            {!! $crud->getSubheading() ?? "Thêm".' '.$crud->entity_name !!}
           </h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>

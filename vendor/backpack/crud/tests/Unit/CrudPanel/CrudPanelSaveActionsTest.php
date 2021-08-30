@@ -2,9 +2,6 @@
 
 namespace Backpack\CRUD\Tests\Unit\CrudPanel;
 
-/**
- * @covers Backpack\CRUD\app\Library\CrudPanel\Traits\SaveActions
- */
 class CrudPanelSaveActionsTest extends BaseDBCrudPanelTest
 {
     private $singleSaveAction;

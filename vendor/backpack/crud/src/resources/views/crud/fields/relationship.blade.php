@@ -6,7 +6,7 @@
     }
     $field['multiple'] = $field['multiple'] ?? $crud->relationAllowsMultiple($field['relation_type']);
     $field['ajax'] = $field['ajax'] ?? isset($field['data_source']);
-    $field['placeholder'] = $field['placeholder'] ?? ($field['multiple'] ? trans('backpack::crud.select_entries') : trans('backpack::crud.select_entry'));
+    $field['placeholder'] = $field['placeholder'] ?? ($field['multiple'] ? "Chọn các mục" : "Chọn mục");
     $field['attribute'] = $field['attribute'] ?? (new $field['model'])->identifiableAttribute();
     $field['allows_null'] = $field['allows_null'] ?? $crud->model::isColumnNullable($field['name']);
     // Note: isColumnNullable returns true if column is nullable in database, also true if column does not exist.

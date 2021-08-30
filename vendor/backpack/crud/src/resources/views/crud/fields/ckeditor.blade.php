@@ -38,30 +38,71 @@
 
     {{-- FIELD JS - will be loaded in the after_scripts section --}}
     @push('crud_fields_scripts')
-        <script src="{{ asset('packages/ckeditor/ckeditor.js') }}"></script>
-        <script src="{{ asset('packages/ckeditor/adapters/jquery.js') }}"></script>
+        <script src="{{asset('packages/ckeditor4/ckeditor.js')}}"></script>
+{{--        <script src="//cdn.ckeditor.com/4.16.0/full/ckeditor.js"></script>--}}
+                <script src="{{ asset('packages/ckeditor4/adapters/jquery.js') }}"></script>
         <script>
-            function bpFieldInitCKEditorElement(element) {
+            a = document.getElementsByTagName('textarea');
+            for(i=0;i<a.length;i++){
+                a[i].id = i;
+                CKEDITOR.replace(i.toString(),{
+                    extraPlugins: 'embed,autoembed,image2',
+                    height: 500,
+
+                    // Load the default contents.css file plus customizations for this sample.
+                    contentsCss: [
+                        'http://cdn.ckeditor.com/4.16.0/full-all/contents.css',
+                        'https://ckeditor.com/docs/ckeditor4/4.16.0/examples/assets/css/widgetstyles.css'
+                    ],
+                    // Setup content provider. See https://ckeditor.com/docs/ckeditor4/latest/features/media_embed
+                    embed_provider: '//ckeditor.iframe.ly/api/oembed?url={url}&callback={callback}',
+
+                    // Configure the Enhanced Image plugin to use classes instead of styles and to disable the
+                    // resizer (because image size is controlled by widget styles or the image takes maximum
+                    // 100% of the editor width).
+                    image2_alignClasses: ['image-align-left', 'image-align-center', 'image-align-right'],
+                    image2_disableResizer: true,
+
+                    filebrowserBrowseUrl: '/admin/elfinder#elf_l1_Lw',
+                    filebrowserImageBrowseUrl: '/admin/elfinder#elf_l1_Lw',
+                    filebrowserUploadUrl: '/uploads',
+                    filebrowserImageUploadUrl: '/uploads'
+                });
+            }
+            // $('textarea').attr('id','editor').each(
+            //     CKEDITOR.replace( 'editor' )
+            // )
+            // DecoupledEditor
+            //     .create( document.querySelector( 'textarea' ) )
+            //     .then( editor => {
+            //         const toolbarContainer = document.querySelector( '#toolbar-container' );
+            //
+            //         toolbarContainer.appendChild( editor.ui.view.toolbar.element );
+            //     } )
+            //     .catch( error => {
+            //         console.error( error );
+            //     } );
+            // function bpFieldInitCKEditorElement(element) {
 
 
                 //when removing ckeditor field from page html the instance is not properly deleted.
                 //this event is triggered in repeatable on deletion so this field can intercept it
                 //and properly delete the instances so it don't throw errors of unexistent elements in page that has initialized ck instances.
-                element.on('backpack_field.deleted', function(e) {
-                    $ck_instance_name = element.siblings("[id^='cke_editor']").attr('id');
-
-                    //if the instance name starts with cke_ it was an auto-generated name from ckeditor
-                    //that happens because in repeatable we stripe the field names used by ckeditor, so it renders a random name
-                    //that starts with cke_
-                    if($ck_instance_name.startsWith('cke_')) {
-                        $ck_instance_name = $ck_instance_name.substr(4);
-                    }
-                    //we fully destroy the instance when element is deleted from the page.
-                    CKEDITOR.instances[$ck_instance_name].destroy(true);
-                });
-                // trigger a new CKEditor
-                element.ckeditor(element.data('options'));
-            }
+                // element.on('backpack_field.deleted', function(e) {
+                //     $ck_instance_name = element.siblings("[id^='cke_editor']").attr('id');
+                //
+                //     //if the instance name starts with cke_ it was an auto-generated name from ckeditor
+                //     //that happens because in repeatable we stripe the field names used by ckeditor, so it renders a random name
+                //     //that starts with cke_
+                //     if($ck_instance_name.startsWith('cke_')) {
+                //         $ck_instance_name = $ck_instance_name.substr(4);
+                //     }
+                //     //we fully destroy the instance when element is deleted from the page.
+                //     CKEDITOR.instances[$ck_instance_name].destroy(true);
+                // });
+                // // trigger a new CKEditor
+                // element.ckeditor(element.data('options'));
+            // }
         </script>
     @endpush
 

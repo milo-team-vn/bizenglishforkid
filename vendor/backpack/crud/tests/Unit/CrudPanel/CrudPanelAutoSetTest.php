@@ -10,9 +10,6 @@ class MyColumnTypeWithOtherConnection extends ColumnType
     protected $connection = 'testing_2';
 }
 
-/**
- * @covers Backpack\CRUD\app\Library\CrudPanel\Traits\Autoset
- */
 class CrudPanelAutoSetTest extends BaseDBCrudPanelTest
 {
     private $expectedUnknownFieldType = 'text';

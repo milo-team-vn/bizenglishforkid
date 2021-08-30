@@ -1,7 +1,7 @@
 {
     "name": "backpack/crud",
     "type": "library",
-    "description": "Quickly build an admin interfaces using Laravel, CoreUI, Bootstrap and jQuery.",
+    "description": "Quickly build an admin interfaces using Laravel 7, CoreUI, Boostrap 4 and jQuery.",
     "keywords": [
         "backpack",
         "base",
@@ -26,8 +26,8 @@
     "authors": [
         {
             "name": "Cristian Tabacitu",
-            "email": "tabacitu@backpackforlaravel.com",
-            "homepage": "https://backpackforlaravel.com",
+            "email": "hello@tabacitu.ro",
+            "homepage": "http://www.tabacitu.ro",
             "role": "Creator & Maintainer"
         }
     ],
@@ -61,8 +61,7 @@
     },
     "scripts": {
         "test": "vendor/bin/phpunit --testdox",
-        "test-failing": "vendor/bin/phpunit --order-by=defects --stop-on-failure",
-        "test-coverage": "XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-text"
+        "test-failing": "vendor/bin/phpunit --order-by=defects --stop-on-failure"
     },
     "extra": {
         "branch-alias": {
