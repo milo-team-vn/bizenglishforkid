@@ -72,7 +72,7 @@
                         <a class="nav-link" href="{{route('index')}}">Trang chủ</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{route('page',['type'=>'trade_teacher'])}}">Về chúng tôi</a>
+                        <a class="nav-link" href="{{route('page',['type'=>'about'])}}">Về chúng tôi</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="{{route('index')}}#giaovien">Tìm giáo viên</a>
