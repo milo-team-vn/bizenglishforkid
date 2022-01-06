@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Prolife;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Symfony\Component\Console\Input\Input;
 
@@ -64,14 +65,18 @@ class Filter extends Controller
         $data = [];
         foreach ($match as $key => $id) {
             $prolife = Prolife::where('id', '=', $id)->first();
-            $data[$key]['id'] = $prolife->users()->first()->id;
-            $data[$key]['name'] = $prolife->users()->first()->name;
-            $data[$key]['avatar'] = $prolife->users()->first()->avatar;
-            $data[$key]['level'] = $prolife->description;
-            $data[$key]['table'] = $prolife->celendar;
-            $data[$key]['video'] = $prolife->video;
-            $data[$key]['price'] = $prolife->price;
-            $data[$key]['options'] = $prolife->options()->get();
+            if(isset($prolife)){
+               if(User::find($prolife->user_id)!==null){
+                   $data[$key]['id'] = $prolife->users()->first()->id;
+                   $data[$key]['name'] = $prolife->users()->first()->name;
+                   $data[$key]['avatar'] = $prolife->users()->first()->avatar;
+                   $data[$key]['level'] = $prolife->description;
+                   $data[$key]['table'] = $prolife->celendar;
+                   $data[$key]['video'] = $prolife->video;
+                   $data[$key]['price'] = $prolife->price;
+                   $data[$key]['options'] = $prolife->options()->get();
+               }
+            }
         }
         return view('frontend.teachers', ['data' => $data, 'title' => 'Lọc giáo viên']);
     }
